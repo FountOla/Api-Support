@@ -1,26 +1,35 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false,
     "module": "ESNext",
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+
     "moduleResolution": "bundler",
     "isolatedModules": true,
-    "moduleDetection": "force",
+
     "allowJs": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+
     "jsx": "react-jsx",
+
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     },
-    "allowImportingTsExtensions": true,
-    "noEmit": true
-  }
+
+    // 🔥 CRITICAL FIX
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "."
+  },
+
+  "include": [
+    "server.ts",
+    "prisma.config.ts",
+    "src"
+  ],
+
+  "exclude": ["node_modules", "dist"]
 }
