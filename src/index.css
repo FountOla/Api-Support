@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #C4622D; /* Pepper Dust */
+  --color-brand-secondary: #5C6B2A; /* Dried Leaf */
+  --color-brand-success: #5C6B2A; /* Dried Leaf */
+  --color-brand-warning: #E8C547; /* Yam Yellow */
+  --color-brand-error: #B91C1C; /* Keep a readable Red but slightly muted */
+  
+  --color-bg-navy: #2C1A0E; /* Charred Wood */
+  --color-surface: #3D2616; /* Lighter Charred/Suya hybrid */
+  --color-border: #4D3B2E; /* Earthy border */
+}
+
+@layer base {
+  body {
+    @apply bg-bg-navy text-[#F4F4E8] font-sans antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-surface/50 backdrop-blur-md border border-border rounded-xl;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
